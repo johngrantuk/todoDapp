@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/todoDapp/static/css/main.229ec843.chunk.css",
+    "main.js": "/todoDapp/static/js/main.3533216e.chunk.js",
+    "main.js.map": "/todoDapp/static/js/main.3533216e.chunk.js.map",
+    "runtime-main.js": "/todoDapp/static/js/runtime-main.21a2768c.js",
+    "runtime-main.js.map": "/todoDapp/static/js/runtime-main.21a2768c.js.map",
+    "static/js/2.cdaf2fb3.chunk.js": "/todoDapp/static/js/2.cdaf2fb3.chunk.js",
+    "static/js/2.cdaf2fb3.chunk.js.map": "/todoDapp/static/js/2.cdaf2fb3.chunk.js.map",
+    "index.html": "/todoDapp/index.html",
+    "precache-manifest.f0b55437eac531b7b3f6d4358c38e037.js": "/todoDapp/precache-manifest.f0b55437eac531b7b3f6d4358c38e037.js",
+    "service-worker.js": "/todoDapp/service-worker.js",
+    "static/css/main.229ec843.chunk.css.map": "/todoDapp/static/css/main.229ec843.chunk.css.map",
+    "static/media/nucleo-icons.css": "/todoDapp/static/media/nucleo.f0b489a5.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21a2768c.js",
+    "static/js/2.cdaf2fb3.chunk.js",
+    "static/css/main.229ec843.chunk.css",
+    "static/js/main.3533216e.chunk.js"
+  ]
+}
