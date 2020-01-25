@@ -10,6 +10,8 @@ Main app is in ./client
 
 Used [Creative Tim Black Dashboard](https://demos.creative-tim.com/black-dashboard/docs/1.0/components/alerts.html) for styling.
 
+Deployed to Rinkeby: 0x835F067c6d09004eaCb843b84213f37008500dfE
+
 ### Running DAPP Locally
 
 Start local ganache: `$ ganache-cli`
