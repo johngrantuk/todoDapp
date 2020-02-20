@@ -30,48 +30,91 @@ class App extends Component {
   async makeSignature(){
     console.log('SIGNING');
 
-    const domain = [
-      { name: 'name', type: 'string' },
-      { name: 'version', type: 'string' },
-      { name: 'chainId', type: 'uint256' },
-      { name: 'verifyingContract', type: 'address' }
+    const permitSchema = [
+        { name: "holder", type: "address" },
+        { name: "spender", type: "address" },
+        { name: "nonce", type: "uint256" },
+        { name: "expiry", type: "uint256" },
+        { name: "allowed", type: "bool" },
     ];
-
-    const permit = [
-      { name: 'holder', type: 'address'},
-      { name: 'spender', type: 'address'},
-      { name: 'nonce', type: 'uint256'},
-      { name: 'expiry', type: 'uint256'},
-      { name: 'allowed', type: 'bool'}
-    ]
+    /*
+    const domain = [
+      { name: "name", type: "string" },
+      { name: "version", type: "string" },
+      { name: "chainId", type: "uint256" },
+      { name: "verifyingContract", type: "address" },
+      { name: "salt", type: "bytes32" },
+    ];
+    */
+    const domain = [
+        { name: "name", type: "string" },
+        { name: "version", type: "string" },
+        { name: "chainId", type: "uint256" },
+        { name: "verifyingContract", type: "address" },
+    ];
+    /*
+    const bid = [
+        { name: "amount", type: "uint256" },
+        { name: "bidder", type: "Identity" },
+    ];
+    const identity = [
+        { name: "userId", type: "uint256" },
+        { name: "wallet", type: "address" },
+    ];
+    */
 
     const chainId = await this.state.web3.eth.net.getId();
     console.log(chainId)
-
+    /*
     const domainData = {
-        name: 'Permit Test',
-        version: '1',
+        name: "My amazing dApp",
+        version: "2",
         chainId: chainId,
-        verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
+        verifyingContract: "0x1C56346CD2A2Bf3202F771f50d3D14a367B48070",
+        salt: "0xf2d857f4a3edcb9b78b4d503bfe733db1e3f6cdc2b7971ee739626c97e86a558"
     };
+    */
+    /*
+    const domainData = {
+        daiMainnet: {
+            name: "Dai Stablecoin",
+            version: "1",
+            chainId: "1",
+            verifyingContract: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        },
+    };
+    */
+    // Correct version of above?
+    const domainData = {
+            name: "Dai Stablecoin",
+            version: "1",
+            chainId: chainId ,
+            verifyingContract: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    };
+    /*
+    var message = {
+            holder: from,
+            spender: GASLESS_CONTRACT,
+            nonce,
+            expiry: deadline,
+            allowed: true
+        };
+        */
 
-    const message = {
-          holder: this.state.accounts[0],
-          spender: 'THIS_WOULD_BE_RDAI',
-          nonce: 1,
-          expiry: 0,
-          allowed: 'true'
-      }
+    var message = {
+      message: 'This can be anything? '
+    };
 
     const data = JSON.stringify({
         types: {
             EIP712Domain: domain,
-            Permit: permit
+            Permit: permitSchema,
         },
         domain: domainData,
         primaryType: "Permit",
         message: message
     });
+
 
     const signer = this.state.web3.utils.toChecksumAddress(this.state.accounts[0]);
     console.log('Signer: ' + signer)
@@ -192,7 +235,7 @@ class App extends Component {
       <Container>
         <Alert color="danger" isOpen={this.state.alertVisible} toggle={this.onDismiss}>{this.state.alertText}</Alert>
 
-        <h1 id='header-1'>TO DO DAPP</h1>
+        <h1>TO DO DAPP</h1>
         <Address address={accounts[0]} />
         <NewTask web3={web3} accounts={accounts} toDoContract={toDoContract} loadTasks={this.loadTasks}/>
         <AccountTasks web3={web3} accounts={accounts} toDoContract={toDoContract} tasks={tasks} loadTasks={this.loadTasks}/>

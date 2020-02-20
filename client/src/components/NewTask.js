@@ -57,7 +57,7 @@ class NewTask extends Component {
                       <input type="text" className="form-control" placeholder="New Task" onChange={this.updateTask}/>
                     </div>
                   </form>
-                  <button className="btn btn-fill btn-primary" onClick={this.makeNewTask}>Post</button>
+                  <button className="btn btn-fill btn-primary" id="makeNewTask" onClick={this.makeNewTask}>Post</button>
                 </div>
               </div>
             </div>

@@ -36,40 +36,47 @@ class App extends Component {
       { name: 'chainId', type: 'uint256' },
       { name: 'verifyingContract', type: 'address' }
     ];
+    const person = [
+      { name: 'name', type: 'string' },
+      { name: 'wallet', type: 'address' }
+    ];
 
-    const permit = [
-      { name: 'holder', type: 'address'},
-      { name: 'spender', type: 'address'},
-      { name: 'nonce', type: 'uint256'},
-      { name: 'expiry', type: 'uint256'},
-      { name: 'allowed', type: 'bool'}
-    ]
+    const mail = [
+      { name: 'from', type: 'Person' },
+      { name: 'to', type: 'Person' },
+      { name: 'contents', type: 'string' }
+    ];
 
     const chainId = await this.state.web3.eth.net.getId();
     console.log(chainId)
 
     const domainData = {
-        name: 'Permit Test',
+        name: 'Ether Mail',
         version: '1',
         chainId: chainId,
         verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
     };
 
-    const message = {
-          holder: this.state.accounts[0],
-          spender: 'THIS_WOULD_BE_RDAI',
-          nonce: 1,
-          expiry: 0,
-          allowed: 'true'
-      }
+    var message = {
+            from: {
+                name: 'Cow',
+                wallet: '0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826',
+            },
+            to: {
+                name: 'Bob',
+                wallet: '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
+            },
+            contents: 'Hello, Bob!',
+    };
 
     const data = JSON.stringify({
         types: {
             EIP712Domain: domain,
-            Permit: permit
+            Mail: mail,
+            Person: person
         },
         domain: domainData,
-        primaryType: "Permit",
+        primaryType: "Mail",
         message: message
     });
 
@@ -192,7 +199,7 @@ class App extends Component {
       <Container>
         <Alert color="danger" isOpen={this.state.alertVisible} toggle={this.onDismiss}>{this.state.alertText}</Alert>
 
-        <h1 id='header-1'>TO DO DAPP</h1>
+        <h1>TO DO DAPP</h1>
         <Address address={accounts[0]} />
         <NewTask web3={web3} accounts={accounts} toDoContract={toDoContract} loadTasks={this.loadTasks}/>
         <AccountTasks web3={web3} accounts={accounts} toDoContract={toDoContract} tasks={tasks} loadTasks={this.loadTasks}/>

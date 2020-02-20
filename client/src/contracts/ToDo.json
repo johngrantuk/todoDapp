@@ -4858,10 +4858,106 @@
       "links": {},
       "address": "0x111655686701c808d338B74F5ea56c2839C580b0",
       "transactionHash": "0x9fa51ae34fd97b112621bee821db5016c25726eeb3823920eb202b93777cb7a9"
+    },
+    "1581785546095": {
+      "events": {
+        "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "content",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "name": "TaskCreated",
+          "type": "event",
+          "signature": "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2"
+        },
+        "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "isComplete",
+              "type": "bool"
+            }
+          ],
+          "name": "TaskStatusToggled",
+          "type": "event",
+          "signature": "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d"
+        }
+      },
+      "links": {},
+      "address": "0xCfEB869F69431e42cdB54A4F4f105C19C080A601",
+      "transactionHash": "0x64fb2e44a7b4a54a06f5bbdcf8efa2e0f43ea44b8cca22a79418ee62181e1eb6"
+    },
+    "1581809472005": {
+      "events": {
+        "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "content",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "name": "TaskCreated",
+          "type": "event",
+          "signature": "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2"
+        },
+        "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "isComplete",
+              "type": "bool"
+            }
+          ],
+          "name": "TaskStatusToggled",
+          "type": "event",
+          "signature": "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d"
+        }
+      },
+      "links": {},
+      "address": "0x6a0B5678fD562ea1645C871845B27E74C6D28621",
+      "transactionHash": "0x2d28f7363f5c202dd361dd7f93aa1545485ddd68863060b0940aa0d9ebeea3c2"
     }
   },
   "schemaVersion": "3.0.16",
-  "updatedAt": "2020-01-11T23:14:01.714Z",
+  "updatedAt": "2020-02-15T23:35:19.711Z",
   "devdoc": {
     "methods": {}
   },

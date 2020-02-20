@@ -31,45 +31,48 @@ class App extends Component {
     console.log('SIGNING');
 
     const domain = [
-      { name: 'name', type: 'string' },
-      { name: 'version', type: 'string' },
-      { name: 'chainId', type: 'uint256' },
-      { name: 'verifyingContract', type: 'address' }
+      { name: "name", type: "string" },
+      { name: "version", type: "string" },
+      { name: "chainId", type: "uint256" },
+      { name: "verifyingContract", type: "address" },
+      { name: "salt", type: "bytes32" },
     ];
-
-    const permit = [
-      { name: 'holder', type: 'address'},
-      { name: 'spender', type: 'address'},
-      { name: 'nonce', type: 'uint256'},
-      { name: 'expiry', type: 'uint256'},
-      { name: 'allowed', type: 'bool'}
-    ]
+    const bid = [
+        { name: "amount", type: "uint256" },
+        { name: "bidder", type: "Identity" },
+    ];
+    const identity = [
+        { name: "userId", type: "uint256" },
+        { name: "wallet", type: "address" },
+    ];
 
     const chainId = await this.state.web3.eth.net.getId();
     console.log(chainId)
 
     const domainData = {
-        name: 'Permit Test',
-        version: '1',
+        name: "My amazing dApp",
+        version: "2",
         chainId: chainId,
-        verifyingContract: '0xCcCCccccCCCCcCCCCCCcCcCccCcCCCcCcccccccC',
+        verifyingContract: "0x1C56346CD2A2Bf3202F771f50d3D14a367B48070",
+        salt: "0xf2d857f4a3edcb9b78b4d503bfe733db1e3f6cdc2b7971ee739626c97e86a558"
     };
 
-    const message = {
-          holder: this.state.accounts[0],
-          spender: 'THIS_WOULD_BE_RDAI',
-          nonce: 1,
-          expiry: 0,
-          allowed: 'true'
-      }
+    var message = {
+        amount: 100,
+        bidder: {
+            userId: 323,
+            wallet: "0x3333333333333333333333333333333333333333"
+        }
+    };
 
     const data = JSON.stringify({
         types: {
             EIP712Domain: domain,
-            Permit: permit
+            Bid: bid,
+            Identity: identity,
         },
         domain: domainData,
-        primaryType: "Permit",
+        primaryType: "Bid",
         message: message
     });
 
@@ -192,7 +195,7 @@ class App extends Component {
       <Container>
         <Alert color="danger" isOpen={this.state.alertVisible} toggle={this.onDismiss}>{this.state.alertText}</Alert>
 
-        <h1 id='header-1'>TO DO DAPP</h1>
+        <h1>TO DO DAPP</h1>
         <Address address={accounts[0]} />
         <NewTask web3={web3} accounts={accounts} toDoContract={toDoContract} loadTasks={this.loadTasks}/>
         <AccountTasks web3={web3} accounts={accounts} toDoContract={toDoContract} tasks={tasks} loadTasks={this.loadTasks}/>
