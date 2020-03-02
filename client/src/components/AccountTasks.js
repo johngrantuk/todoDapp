@@ -15,7 +15,7 @@ class AccountTasks extends Component {
       })
 
     let taskDisplay =
-      <Table>
+      <Table id="taskDisplay">
         <thead>
           <tr>
             <th className="text-center">#</th>
@@ -29,7 +29,7 @@ class AccountTasks extends Component {
       </Table>
 
     if(tasks.length === 0){
-      taskDisplay = <h3>No Tasks! Looks Like You're Nice & Relaxed 😊</h3>
+      taskDisplay = <h3 id="taskDisplay">No Tasks! Looks Like You're Nice & Relaxed 😊</h3>
     }
 
     return (

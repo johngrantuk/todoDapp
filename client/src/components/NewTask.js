@@ -54,7 +54,7 @@ class NewTask extends Component {
                 <div className="card-body">
                   <form>
                     <div className="form-group">
-                      <input type="text" className="form-control" placeholder="New Task" onChange={this.updateTask}/>
+                      <input id="newTaskInput" type="text" className="form-control" placeholder="New Task" onChange={this.updateTask}/>
                     </div>
                   </form>
                   <button className="btn btn-fill btn-primary" id="makeNewTask" onClick={this.makeNewTask}>Post</button>
