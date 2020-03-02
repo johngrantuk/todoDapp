@@ -4641,8 +4641,7 @@
             }
           ],
           "name": "TaskCreated",
-          "type": "event",
-          "signature": "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2"
+          "type": "event"
         },
         "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d": {
           "anonymous": false,
@@ -4659,8 +4658,7 @@
             }
           ],
           "name": "TaskStatusToggled",
-          "type": "event",
-          "signature": "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d"
+          "type": "event"
         }
       },
       "links": {},
@@ -4689,8 +4687,7 @@
             }
           ],
           "name": "TaskCreated",
-          "type": "event",
-          "signature": "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2"
+          "type": "event"
         },
         "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d": {
           "anonymous": false,
@@ -4707,8 +4704,7 @@
             }
           ],
           "name": "TaskStatusToggled",
-          "type": "event",
-          "signature": "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d"
+          "type": "event"
         }
       },
       "links": {},
@@ -4737,8 +4733,7 @@
             }
           ],
           "name": "TaskCreated",
-          "type": "event",
-          "signature": "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2"
+          "type": "event"
         },
         "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d": {
           "anonymous": false,
@@ -4755,8 +4750,7 @@
             }
           ],
           "name": "TaskStatusToggled",
-          "type": "event",
-          "signature": "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d"
+          "type": "event"
         }
       },
       "links": {},
@@ -4785,8 +4779,7 @@
             }
           ],
           "name": "TaskCreated",
-          "type": "event",
-          "signature": "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2"
+          "type": "event"
         },
         "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d": {
           "anonymous": false,
@@ -4803,8 +4796,7 @@
             }
           ],
           "name": "TaskStatusToggled",
-          "type": "event",
-          "signature": "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d"
+          "type": "event"
         }
       },
       "links": {},
@@ -4833,8 +4825,7 @@
             }
           ],
           "name": "TaskCreated",
-          "type": "event",
-          "signature": "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2"
+          "type": "event"
         },
         "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d": {
           "anonymous": false,
@@ -4851,8 +4842,7 @@
             }
           ],
           "name": "TaskStatusToggled",
-          "type": "event",
-          "signature": "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d"
+          "type": "event"
         }
       },
       "links": {},
@@ -4881,8 +4871,7 @@
             }
           ],
           "name": "TaskCreated",
-          "type": "event",
-          "signature": "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2"
+          "type": "event"
         },
         "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d": {
           "anonymous": false,
@@ -4899,8 +4888,7 @@
             }
           ],
           "name": "TaskStatusToggled",
-          "type": "event",
-          "signature": "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d"
+          "type": "event"
         }
       },
       "links": {},
@@ -4929,8 +4917,7 @@
             }
           ],
           "name": "TaskCreated",
-          "type": "event",
-          "signature": "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2"
+          "type": "event"
         },
         "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d": {
           "anonymous": false,
@@ -4947,17 +4934,109 @@
             }
           ],
           "name": "TaskStatusToggled",
-          "type": "event",
-          "signature": "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d"
+          "type": "event"
         }
       },
       "links": {},
       "address": "0x6a0B5678fD562ea1645C871845B27E74C6D28621",
       "transactionHash": "0x2d28f7363f5c202dd361dd7f93aa1545485ddd68863060b0940aa0d9ebeea3c2"
+    },
+    "1582798368571": {
+      "events": {
+        "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "content",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "name": "TaskCreated",
+          "type": "event"
+        },
+        "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "isComplete",
+              "type": "bool"
+            }
+          ],
+          "name": "TaskStatusToggled",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xA38DEFdDfc50D5E4bD803a4Fd08b4a7163c5Dfb1",
+      "transactionHash": "0x43bdf7dff4830c41331cef3a6195062b4f3c4ac57fe1a109edddaa27ce0b067c"
+    },
+    "1583139480656": {
+      "events": {
+        "0xdc691e972cb25fd6e968744b5a6416d42a052ac1305e3b7ed6777b621304b7f2": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "content",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "owner",
+              "type": "address"
+            }
+          ],
+          "name": "TaskCreated",
+          "type": "event"
+        },
+        "0xc63c34089ec3ca7025b2576e9e17e226d1e6c33f64661975d35df1cea0c0a60d": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            },
+            {
+              "indexed": false,
+              "name": "isComplete",
+              "type": "bool"
+            }
+          ],
+          "name": "TaskStatusToggled",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x8e681adb9e856fA5bF85a4f01C9C0782eb828043",
+      "transactionHash": "0x06c45b615ae9daf34312000545ad7a0a022992721eaf2b52bd1ea62d83bbbac6"
     }
   },
-  "schemaVersion": "3.0.16",
-  "updatedAt": "2020-02-15T23:35:19.711Z",
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-03-02T08:58:18.983Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },

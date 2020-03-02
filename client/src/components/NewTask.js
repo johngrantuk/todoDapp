@@ -43,7 +43,7 @@ class NewTask extends Component {
     return(
 
       <div>
-        <Alert color="danger" isOpen={this.state.visible} toggle={this.onDismiss}>{this.state.alertText}</Alert>
+        <Alert color="danger" id="NewTaskAlert" isOpen={this.state.visible} toggle={this.onDismiss}>{this.state.alertText}</Alert>
         <div className="content">
           <div className="row">
             <div className="col-md-12">

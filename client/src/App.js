@@ -190,7 +190,7 @@ class App extends Component {
     return (
       <div className="App">
       <Container>
-        <Alert color="danger" isOpen={this.state.alertVisible} toggle={this.onDismiss}>{this.state.alertText}</Alert>
+        <Alert color="danger" id='mainAlert' isOpen={this.state.alertVisible} toggle={this.onDismiss}>{this.state.alertText}</Alert>
 
         <h1 id='header-1'>TO DO DAPP</h1>
         <Address address={accounts[0]} />

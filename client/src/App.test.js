@@ -55,21 +55,36 @@ test("renders learn react link", async () => {
   // you can change the network if you want
   await metamask.switchNetwork('localhost');
 
-  const page = await browser.newPage()
-  await page.goto('http://localhost:3000/')
+  const page = await browser.newPage();
+  await page.goto('http://localhost:3000/');
 
-  await page.waitForSelector('#header-1')
-
+  // await page.waitForSelector('#header-1');
+  console.log('Header here.')
+  // await page.waitFor(5000);
   await metamask.approve();
+  // await page.waitFor(5000);
+  // console.log(page)
+  await page.bringToFront();
+  await page.waitFor(1000);
+  await page.reload();
+  await page.waitFor(3000);
+  /*
+  let pages = await browser.pages();
+  console.log('Pages:')
+  console.log(pages)
+  */
 
   // go to a dapp and do something that prompts MetaMask to confirm a transaction
 
 
   const payButton = await page.$('#makeNewTask')
-
   await payButton.click()
 
-  await metamask.confirmTransaction()
+  const alert = await page.$eval("#NewTaskAlert", e => e.innerText);
+  console.log(alert)
+  expect(alert).toBe(`Please Enter Some Task Info`);
+
+  // await metamask.confirmTransaction()
 
 
 });
